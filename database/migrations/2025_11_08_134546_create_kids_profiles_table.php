@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('kids_profiles', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 100);
+            $table->integer('age');
+            $table->enum('favorite_color', ['blue', 'red', 'green', 'yellow', 'pink']);
+            $table->text('bio')->nullable(); // text area
+            $table->string('avatar_path')->nullable(); // imagen/avatar
             $table->timestamps();
         });
     }

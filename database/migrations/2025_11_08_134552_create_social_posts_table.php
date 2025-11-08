@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('social_posts', function (Blueprint $table) {
             $table->id();
+            $table->string('username', 100);
+            $table->enum('visibility', ['public', 'friends', 'private'])->default('public');
+            $table->text('content')->nullable(); // text area
+            $table->string('image_path')->nullable(); // imagen adjunta
+            $table->integer('likes')->default(0);
             $table->timestamps();
         });
     }

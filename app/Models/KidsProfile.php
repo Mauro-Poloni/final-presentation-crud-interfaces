@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class KidsProfile extends Model
 {
-    //
+    use HasFactory;
+    protected $fillable = ['name','age','favorite_color','bio','avatar_path'];
 }

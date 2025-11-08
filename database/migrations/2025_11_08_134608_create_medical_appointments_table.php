@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('medical_appointments', function (Blueprint $table) {
             $table->id();
+            $table->string('patient_name', 100);
+            $table->string('doctor_name', 100);
+            $table->dateTime('appointment_date');
+            $table->enum('specialty', ['pediatrics', 'cardiology', 'dermatology', 'general_medicine']);
+            $table->text('notes')->nullable(); // text area
+            $table->string('attachment_path')->nullable(); // imagen o informe adjunto
             $table->timestamps();
         });
     }
