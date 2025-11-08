@@ -13,7 +13,7 @@ class KidsProfileController extends Controller
      */
     public function index()
     {
-        $kids_profiles = KidsProfile::orderBy('created_at', 'desc')->paginate(10);
+        $kids_profiles = KidsProfile::orderBy('created_at', 'desc')->paginate(8);
         return view('kids_profiles.index', compact('kids_profiles'));
     }
 

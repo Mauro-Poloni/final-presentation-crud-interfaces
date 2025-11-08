@@ -13,7 +13,7 @@ class BankAccountController extends Controller
      */
     public function index()
     {
-        $bank_accounts = BankAccount::orderBy('created_at', 'desc')->paginate(10);
+        $bank_accounts = BankAccount::orderBy('created_at', 'desc')->paginate(6);
         return view('bank_accounts.index', compact('bank_accounts'));
     }
 

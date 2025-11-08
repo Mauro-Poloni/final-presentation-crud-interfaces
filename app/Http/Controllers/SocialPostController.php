@@ -13,7 +13,7 @@ class SocialPostController extends Controller
      */
     public function index()
     {
-        $social_posts = SocialPost::orderBy('created_at', 'desc')->paginate(10);
+        $social_posts = SocialPost::orderBy('created_at', 'desc')->paginate(5);
         return view('social_posts.index', compact('social_posts'));
     }
 

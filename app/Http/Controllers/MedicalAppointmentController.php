@@ -13,7 +13,7 @@ class MedicalAppointmentController extends Controller
      */
     public function index()
     {
-        $medical_appointments = MedicalAppointment::orderBy('appointment_date', 'asc')->paginate(10);
+        $medical_appointments = MedicalAppointment::orderBy('appointment_date', 'asc')->paginate(8);
         return view('medical_appointments.index', compact('medical_appointments'));
     }
 

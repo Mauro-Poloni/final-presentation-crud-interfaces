@@ -33,11 +33,11 @@
     </nav>
 </header>
 
-<main class="flex-1 container mx-auto px-4 py-6">
+<main class="flex-1 container mx-auto px-4 py-4">
     @yield('content')
 </main>
 
-<footer class="bg-white text-gray-800 text-center py-3 mt-10">
+<footer class="bg-white text-gray-800 text-center py-3 mt-2">
     <p class="text-sm">&copy; {{ date('Y') }} - Proyecto de Mauro Poloni - Arquitectura y Diseño de Interfaces</p>
 </footer>
 

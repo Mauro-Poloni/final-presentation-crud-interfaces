@@ -13,7 +13,7 @@ class EngineeringProjectController extends Controller
      */
     public function index()
     {
-        $engineering_projects = EngineeringProject::orderBy('created_at', 'desc')->paginate(10);
+        $engineering_projects = EngineeringProject::orderBy('created_at', 'desc')->paginate(6);
         return view('engineering_projects.index', compact('engineering_projects'));
     }
 
